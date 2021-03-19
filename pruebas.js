@@ -13,3 +13,4 @@ const isBelowThreshold = function (valor) {
 }
 */
 console.log(Numbers.every(isBelowThreshold));
+
