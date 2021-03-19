@@ -12,6 +12,4 @@ const isBelowThreshold = function (valor) {
     return valor<40;
 }
 */
-console.log(Numbers.every(isBelowThreshold)); 
-
-
+console.log(Numbers.every(isBelowThreshold));
