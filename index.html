@@ -10,22 +10,25 @@
 <body>
 
     <header>
-        <h1 class="title">Task Manager</h1>
+        <h1 class="title">Tasks Reminder</h1>
     </header>
     
     <main>
         <section>
+            <p id="pendingtasks"><span>No<span> pending Tasks</p>
             <form>
                 <input type="text" placeholder="Add ur task" required/>
                 <button type="submit">Add ur Task</button>
+                
             </form>
-            
+                        
             <div id="msg">
                 <p class="infomsg"> Please add your tasks </p>
             </div>
     
             <div class="taskslist">
                 <ul></ul>
+                <button id="removeAll">Remove All Tasks</button>
             </div>
         </section>
     </main>

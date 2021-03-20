@@ -1,2 +1,13 @@
 .infomsg{  color:rgb(37, 177, 13); font-weight: 700; }
 .errormsg{  color:red; font-weight: 700; }
+
+.taskslist ul{
+    max-width:320px ;
+}
+.taskslist li{
+    list-style-type: none;
+    line-height: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 15px;
+}
+.taskslist li{list-style-type: none;}
