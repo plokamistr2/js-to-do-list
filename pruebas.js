@@ -27,25 +27,30 @@ const addRemoveTask = (taskText) => {
     task.innerText = taskText;
     listTask.append(task);
     
-
+    
   ///Remove Task on Click
   task.addEventListener("click",()=>{
     task.remove();
     
-  //Remove from local storage
-
+    function removeItem(taskText) {
+      let tasksArray = JSON.parse(localStorage.getItem('Tasks Added'));
+      tasksArray = tasksArray.filter(function(e) {return e !== taskText; });
+      localStorage.setItem('Tasks Added', JSON.stringify(tasksArray));
+    }
+    removeItem(taskText);
   });
+
 }
 
 // We can omit: if(input.value){addTask();} by adding required at HTML input element.
 formTasks.addEventListener("submit",(event)=>{
   event.preventDefault();
   
+  addRemoveTask(writeTask.value);
+
   tasksArray.push(writeTask.value)
   localStorage.setItem('Tasks Added', JSON.stringify(tasksArray))
   
-  addRemoveTask(writeTask.value);
-
   writeTask.value="";
   writeTask.focus();
 });
