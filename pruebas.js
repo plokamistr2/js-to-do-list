@@ -1,3 +1,12 @@
+// DONE Añadir tareas a traves del boton
+// DONE Añadir tareas a traves de la tecla Enter
+// DONE Despues de añadir una tarea limpiar el input y hacerle focus
+// DONE Al hacer click en una tarea deberia borrarse desde localStorage y Front
+// DONE Si se intenta añadir una tarea vacia mostrar un mensaje de error
+// DONE Que las tareas se guarden en localStorage
+// UNDONE Añadir una cuenta de cuantas tareas faltan por completar
+
+
 const formTasks = document.querySelector("form");
 const writeTask = document.querySelector("input");
 const listTask = document.querySelector("ul");
