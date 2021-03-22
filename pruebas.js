@@ -39,7 +39,7 @@ const addRemoveTask = (taskText) => {
   ///Remove Task on Click
   task.addEventListener("click",()=>{
     task.remove();
-    
+                                                                                                       
     function removeItem(taskText) {
       let tasksArray = JSON.parse(localStorage.getItem('Tasks Added'));
       tasksArray = tasksArray.filter((e) => e !== taskText);
