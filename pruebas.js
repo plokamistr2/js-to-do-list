@@ -6,11 +6,10 @@
 // DONE Que las tareas se guarden en localStorage
 // UNDONE Añadir una cuenta de cuantas tareas faltan por completar
 
-
 const formTasks = document.querySelector("form");
 const writeTask = document.querySelector("input");
 const listTask = document.querySelector("ul");
-let pendingTask = document.getElementById("pendingtasks");
+let pendingTask = document.querySelector("#pendingtasks span");
 const removeAll = document.getElementById("removeAll");
 
 
@@ -43,7 +42,7 @@ const addRemoveTask = (taskText) => {
     
     function removeItem(taskText) {
       let tasksArray = JSON.parse(localStorage.getItem('Tasks Added'));
-      tasksArray = tasksArray.filter(function(e) {return e !== taskText; });
+      tasksArray = tasksArray.filter((e) => e !== taskText);
       localStorage.setItem('Tasks Added', JSON.stringify(tasksArray));
     }
     removeItem(taskText);
